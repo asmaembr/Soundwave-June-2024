@@ -1,0 +1,32 @@
+<div class="mt-2 rounded-top-2 py-2 ps-3 pe-3 bg-white">
+  <div class="d-flex justify-content-between align-items-center text-secondary">
+    <div class="d-flex align-items-center ms-3">
+      <fa-icon class="nav-icon me-3" icon="book"></fa-icon>
+      <div>Your Library</div>
+    </div>
+    <a routerLink="/add-song">
+      <fa-icon class="nav-icon" icon="plus"></fa-icon>
+    </a>
+  </div>
+</div>
+<div class="d-flex flex-column rounded-bottom-2 library-height overflow-y-scroll bg-white p-2">
+  @if (isLoading) {
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="spinner-grow text-primary loader" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  } @else {
+    @for (song of songs; track song.publicId) {
+      <div class="mt-1 library-song-card p-1 row align-items-center">
+        <div class="col">
+          <app-small-song-card [song]="song" (songToPlay$)="onPlaySong($event)"></app-small-song-card>
+        </div>
+        <div class="col-auto" (click)="onDeleteSong(song.publicId)">
+            <fa-icon class="text-primary text-black" [icon]="['fas', 'trash']"></fa-icon>
+        </div>
+      </div>
+
+    }
+  }
+</div>

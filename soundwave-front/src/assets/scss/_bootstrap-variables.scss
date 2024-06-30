@@ -1,0 +1,92 @@
+$enable-dark-mode: false;
+
+$body-bg-light: #fff;
+$body-color-light: #000;
+
+$h1-font-size: 1.6rem;
+$h2-font-size: 1.4rem;
+$h3-font-size: 1.2rem;
+$h4-font-size: 1.1rem;
+$h5-font-size: 1rem;
+
+$font-family-base: 'Noto Sans', sans-serif;
+$font-size-base: 0.9rem;
+$font-weight-base: 500;
+$font-size-small: 0.8rem;
+
+$primary: #ff9090;
+$secondary: #000000;
+$white: white;
+$dark: #121212;
+
+$link-color-dark: $secondary;
+$link-decoration: none;
+$link-hover-color-light: $dark;
+$link-color-dark: $secondary;
+
+$btn-border-radius: 25px;
+$btn-padding-x: 30px;
+$btn-padding-y: 10px;
+$btn-font-weight: 700;
+$btn-link-hover-color: $dark;
+
+$input-bg: #e6e6e6;
+$input-color: $secondary;
+$input-placeholder-color: #6a6a6a;
+$input-group-addon-bg: $input-bg;
+$form-floating-height: 50px;
+$form-floating-padding-y: 13px;
+
+//
+// Height
+//
+
+$header-height: 61px;
+$footer-height: 85px;
+$navigation-height: 163px;
+$library-height: calc(100% - $navigation-height);
+$main-row-height: calc(100% - $footer-height);
+$main-content-height: calc(100% - $header-height);
+
+//
+// Card
+//
+
+$card-inactive-background: #f6f5f5;
+$card-border-radius: 15px;
+$card-hover-background: #d6d6d6;
+$card-border-color: $card-inactive-background;
+
+//
+// Form range
+//
+$form-range-track-bg: #f3f3f3;
+$form-range-thumb-bg: $dark;
+$form-range-thumb-width: 0.8rem;
+$form-range-thumb-height: $form-range-thumb-width;
+$form-range-track-width: 75%;
+$form-range-track-height: .3rem;
+
+//
+// Modal
+//
+
+$modal-content-border-color: $white;
+$modal-content-border-width: 0px;
+$modal-content-border-radius: var(--bs-border-radius-lg);
+
+
+.bg-pic{
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none;
+}
